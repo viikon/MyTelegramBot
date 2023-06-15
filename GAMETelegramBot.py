@@ -3,9 +3,10 @@ import time
 import sys
 import telebot
 from telebot import types
+from TOKEN import NEW_TOKEN
 
 HELP = 'This is a rock-paper-scissors game. To play, choose one of the buttons: rock, paper, scissors, lizard, or spock.'
-NEW_TOKEN = '5699346146:AAGwsAkE4HhPdTfAAG43J60fwX6WKKpa6Hc'
+TOKEN = NEW_TOKEN
 
 
 class RPSGame:
@@ -98,14 +99,5 @@ class RPSGame:
         self.bot.polling(none_stop=True)
 
 
-game = RPSGame(NEW_TOKEN)
+game = RPSGame(TOKEN)
 game.run()
-
-# game = RPSGame(NEW_TOKEN)
-
-# while True:
-#     game.run()
-#     self.bot.send_message(message.chat.id, 'Ты выиграл и стал почти бессмертным)))')
-#     play_again = input("Do you want to play again? (да/нет): ")
-#     if play_again.lower() != 'да':
-#         break
